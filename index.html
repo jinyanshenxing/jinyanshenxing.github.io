@@ -184,16 +184,7 @@ a:hover {
     </ul>
     <pre id="synopsis">
       <script>
-        var xhr = new XMLHttpRequest();
-        xhr.open('get', 'https://v1.hitokoto.cn');
-        xhr.onreadystatechange = function () {
-          if (xhr.readyState === 4) {
-            var data = JSON.parse(xhr.responseText);
-            var hitokoto = document.getElementById('hitokoto');
-            hitokoto.innerText = data.hitokoto;
-          }
-        }
-        xhr.send();
+       <img alt="今日诗词" src="https://v2.jinrishici.com/one.svg" style="max-width:100%; display: block; margin: 0 auto;">
       </script>
       
     </pre>
