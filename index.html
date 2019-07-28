@@ -183,17 +183,8 @@ a:hover {
       </div>
     </ul>
     <pre id="synopsis">
-      <script>
-        var xhr = new XMLHttpRequest();
-        xhr.open('get', 'https://v1.hitokoto.cn');
-        xhr.onreadystatechange = function () {
-          if (xhr.readyState === 4) {
-            var data = JSON.parse(xhr.responseText);
-            var hitokoto = document.getElementById('hitokoto');
-            hitokoto.innerText = data.hitokoto;
-          }
-        }
-        xhr.send();
+      
+     <script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
     </pre>
     <div id="extend-info">
       <a class="info-item home" href="https://jinyanshenxing.com/导航" target="_blank">导航</a>
