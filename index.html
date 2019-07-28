@@ -183,15 +183,16 @@ a:hover {
       </div>
     </ul>
     <pre id="synopsis">
-      嗯...
-      最近想做条咸鱼
-      翻着白漂到哪就在哪晾着
-      晒着太阳，发干发臭
-      然后变得刀枪不入
-      哈哈，咸鱼是最强的
+      var getQuote = function(){
+        $.getJSON("https://sslapi.hitokoto.cn/?encode=json",function(json){
+                content = json["hitokoto"];   //获取格言内容
+            author = json["from"];            //获取格言作者
 
-      背景的鲸鱼出自<a href="https://www.gracg.com/p1737074143342970" target="_blank">邦乔彦</a>的<a target="_blank" href="https://kinglisky.github.io/blog/2015/11/17/Letter/">《Letter》</a>
-      特别喜欢那种天空大鱼的感觉
+
+            $(".quote-content").html(content);
+            $(".quote-author").html("——"+author);
+        });
+    }
     </pre>
     <div id="extend-info">
       <a class="info-item home" href="https://jinyanshenxing.com/导航" target="_blank">导航</a>
