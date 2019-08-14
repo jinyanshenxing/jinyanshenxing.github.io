@@ -188,7 +188,7 @@ function players() {
         $('#url').focus();
         return (false)
     }
-	document.getElementById("vplay").src="http://www.zuidazy1.net//index.php?m=vod-search" + a;
+	document.getElementById("vplay").src="http://api.smq1.com/?url=" + a;
 
 }
 
@@ -200,7 +200,7 @@ function players2() {
         return (false)
     }
     var b = {
-      f: 'http://www.zuidazy1.net//index.php?m=vod-search' + a,
+      f: 'http://api.smq1.com/?url=' + a,
         c: 0,
         s: 2,
         p: 1,
