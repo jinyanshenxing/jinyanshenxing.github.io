@@ -21,8 +21,23 @@
 				<!-- Header -->
 					<header id="header">
 						<h1>Welcome</h1>
-						<p> <span id="jinrishici-sentence">正在加载....</span>
-							<script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
+						<p> <script src="https://cdn.jsdelivr.net/npm/bluebird@3/js/browser/bluebird.min.js"></script>
+							<script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@2.0.3/fetch.min.js"></script>
+							<!--End-->
+							<script>
+							  fetch('https://v1.hitokoto.cn')
+								.then(function (res){
+								  return res.json();
+								})
+								.then(function (data) {
+								  var hitokoto = document.getElementById('hitokoto');
+								  hitokoto.innerText = data.hitokoto; 
+								})
+								.catch(function (err) {
+								  console.error(err);
+								})
+							</script>
+
 						</p>
 						<nav>
 							<ul>
