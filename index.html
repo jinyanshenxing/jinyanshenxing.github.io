@@ -21,18 +21,22 @@
 				<!-- Header -->
 					<header id="header">
 						<h1>Welcome</h1>
-						<p> <script>
-								var xhr = new XMLHttpRequest();
-								xhr.open('get', 'https://v1.hitokoto.cn');
-								xhr.onreadystatechange = function () {
-								  if (xhr.readyState === 4) {
-									var data = JSON.parse(xhr.responseText);
+						<p> 
+							<p id="hitokoto">:D 获取中...</p>
+							<script>
+								fetch('https://v1.hitokoto.cn')
+								  .then(function (res){
+									return res.json();
+								  })
+								  .then(function (data) {
 									var hitokoto = document.getElementById('hitokoto');
-									hitokoto.innerText = data.hitokoto;
-								  }
-								}
-								xhr.send();
-							</script>          </p>
+									hitokoto.innerText = data.hitokoto; 
+								  })
+								  .catch(function (err) {
+									console.error(err);
+								  })
+							</script>          
+						</p>
 						<nav>
 							<ul>
 								<li><a href="blog" class="fa fa-home"><span class="label">blog</span></a></li>
