@@ -98,25 +98,24 @@
 									<h2>About</h2>
 								</header>
 								<form action="#" method="post">
-									<div>
-										<div class="row">
-											<div class="col-6 col-12-medium">
-												<input type="text" name="name" placeholder="Name" />
-											</div>
-											<div class="col-6 col-12-medium">
-												<input type="text" name="email" placeholder="Email" />
-											</div>
-											<div class="col-12">
-												<input type="text" name="subject" placeholder="Subject" />
-											</div>
-											<div class="col-12">
-												<textarea name="message" placeholder="Message" rows="6"></textarea>
-											</div>
-											<div class="col-12">
-												<input type="submit" value="Send Message" />
-											</div>
-										</div>
-									</div>
+									<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="108" src="https://cdn.a632079.me/163cplayer.html?playlist=496869422"></iframe>
+									
+									
+									
+									
+									
+									
+									<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+									<div id="poem_sentence"></div>
+									<div id="poem_info"></div>
+									<script type="text/javascript">
+									  jinrishici.load(function(result) {
+										var sentence = document.querySelector("#poem_sentence")
+										var info = document.querySelector("#poem_info")
+										sentence.innerHTML = result.data.content
+										info.innerHTML = '【' + result.data.origin.dynasty + '】' + result.data.origin.author + '《' + result.data.origin.title + '》'
+									  });
+									</script>
 								</form>
 							</article>
 
