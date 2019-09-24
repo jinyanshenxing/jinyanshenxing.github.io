@@ -81,16 +81,11 @@
 			window.onorientationchange = function() { document.body.scrollTop = 0; }
 		</script>
 	
-	 const ap = new APlayer({
-		container: document.getElementById('player'),
-		fixed: true,
-		audio: [{
-			name: 'titanium',
-			artist: 'artist',
-			url: 'music/titanium.mp3',
-			cover: 'cover.jpg',
-		}]
-	 });                
+	 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+     <div class="aplayer" data-id="2305794885" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="true"
+        data-volume="1.0"></div>
+     <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/meting/dist/Meting.min.js"></script>                
 
     </body>
 </html>
