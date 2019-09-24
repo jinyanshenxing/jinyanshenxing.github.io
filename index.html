@@ -81,7 +81,16 @@
 			window.onorientationchange = function() { document.body.scrollTop = 0; }
 		</script>
 	
-	 <EMBED src="music/titanium.mp3" autostart="true" loop="true" width="80" height="20">                
+	const ap = new APlayer({
+		container: document.getElementById('player'),
+		fixed: true,
+		audio: [{
+			name: 'titanium',
+			artist: 'artist',
+			url: 'music/titanium.mp3',
+			cover: 'cover.jpg',
+		}]
+	});                
 
     </body>
 </html>
