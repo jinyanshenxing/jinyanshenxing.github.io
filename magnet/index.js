@@ -1,8 +1,3 @@
-<script>
-
-window.$ = function (selector) {
-  return document.querySelector(selector);
-}
 
 let 主题 = "一天掉多少根头发"
 
@@ -17,7 +12,7 @@ let 论述 = [
     "我们一般认为，抓住了问题的关键，其他一切则会迎刃而解。 ",
     "问题的关键究竟为何? ",
     "主题因何而发生?",
-    "每个人都不得不面对这些问题。 在面对这种问题时， ",
+    "每个人都不得不面对这些问题。  在面对这种问题时， ",
     "一般来讲，我们都必须务必慎重的考虑考虑。 ",
     "要想清楚，主题，到底是一种怎么样的存在。 ",
     "了解清楚主题到底是一种怎么样的存在，是解决一切问题的关键。 ",
@@ -184,7 +179,6 @@ function 增加段落(章节){
 }
 
 function 生成文章(){
-    主题 = $('input').value
     let 文章 = []
     for(let 空 in 主题){
         let 章节 = "";
@@ -208,12 +202,7 @@ function 生成文章(){
         章节 = 增加段落(章节);
         文章.push(章节);
     }
-    let 排版 = "<div>" + 文章.join("</div><div>") + "</div>";
-    $("#论文").innerHTML = 排版;
+    return 文章.join("\n");
 }
 
-</script>
-<div>bullshit generator</div>
-<div>主题<input value="一天掉多少根头发"></input></div>
-<div></div><button onclick="生成文章()">生成</button></div>
-<div id="论文"></div>
+console.log(生成文章())
