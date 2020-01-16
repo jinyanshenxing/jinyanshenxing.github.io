@@ -31,18 +31,37 @@
 						<h1>Welcome</h1>
 					    
 						<p>
-							<script src="https://sslapi.hitokoto.cn/?c=" charset="utf-8"></script>
-                             <div id="hitokoto"></div>
-                             <div id="from"></div>
-                             <script type="text/javascript">
-                             jinrishici.load(function(result) {
-                             var sentence = document.querySelector("#hitokoto")
-                             var info = document.querySelector("#from")
-                             sentence.innerHTML = result.data.content
-                              info.innerHTML = '【' + result.data.origin.dynasty + '】' + result.data.origin.author + '《' + result.data.origin.title + '》'
-                                 });
-                            </script>
+							<script type="text/javascript">
+								window.onload=function () {
+								  var hitokoto = document.querySelector('.hitokoto');
+								  var from = document.querySelector('.from');
+								  update();
+								  function update() {
+									  gethi = new XMLHttpRequest();
+									  gethi.open("GET","https://sslapi.hitokoto.cn/?c=");
+									  //这里选择类别，详见官方文档
+									  gethi.send();
+									  gethi.onreadystatechange = function () {
+										  if (gethi.readyState===4 && gethi.status===200) {
+											  var Hi = JSON.parse(gethi.responseText);
+											  hitokoto.innerHTML = Hi.hitokoto;
+											  from.innerHTML = "from: <b>" + Hi.from + "</b>"; //可自定义输出格式
+										  }
+									  }
+								  }
+								}
+							 
+								<div>   
+                                  <p class="hitokoto"></p> 
+                                  <p class="from"></p> 
+                                </div>
+
+
+							 
+							 </script>
 							
+
+
 						</p>	
 
 
