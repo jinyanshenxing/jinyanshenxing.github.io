@@ -86,7 +86,7 @@
 						 var hrsold=Math.floor(e_hrsold);
 						 var e_minsold=(hrsold-e_hrsold)*-60;
 						 var minsold=Math.floor((hrsold-e_hrsold)*-60); var seconds=Math.floor((minsold-e_minsold)*-60).toString();
-						 document.getElementById("showsectime").innerHTML = "运行"+daysold+"D"+hrsold+"H"+minsold+"M"+seconds+"S";
+						 document.getElementById("showsectime").innerHTML = "运行"+daysold+"天"+hrsold+"时"+minsold+"分"+seconds+"秒";
 						 setTimeout(showsectime, 1000);
 						 }showsectime();
 						</script>
