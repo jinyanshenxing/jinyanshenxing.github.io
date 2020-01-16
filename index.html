@@ -28,17 +28,18 @@
 						<p> 
 							<p id="hitokoto">:D 获取中...</p>
 							<script>
-								var xhr = new XMLHttpRequest();
-								xhr.open('get', 'https://v1.hitokoto.cn');
-								xhr.onreadystatechange = function () {
-								  if (xhr.readyState === 4) {
-									var data = JSON.parse(xhr.responseText);
+								fetch('https://v1.hitokoto.cn')
+								  .then(function (res){
+									return res.json();
+								  })
+								  .then(function (data) {
 									var hitokoto = document.getElementById('hitokoto');
-									hitokoto.innerText = data.hitokoto;
-								  }
-								}
-								xhr.send();
-							  </script>         
+									hitokoto.innerText = data.hitokoto; 
+								  })
+								  .catch(function (err) {
+									console.error(err);
+								  })
+							  </script>        
 						</p>
 						<nav>
 							<ul>
