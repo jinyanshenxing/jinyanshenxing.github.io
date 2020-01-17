@@ -1,0 +1,14 @@
+<urlset xmlns="https://jinyanshenxing.com/schemas/sitemap/0.9">
+    <url>
+        <loc>https://jinyanshenxing.com</loc>
+        <lastmod>2020-01-17T00:00:16+08:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://jinyanshenxing.com/%E8%A7%A3%E6%9E%90/</loc>
+        <lastmod>2020-01-17T00:00:16+08:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+</urlset>
